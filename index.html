@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anton Kovalov — .NET Junior Developer portfolio. C#, REST API, JWT, Entity Framework." />
+  <title>Anton Kovalov — .NET Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── CURSOR GLOW ─────────────────────────────────────── -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ── NAVBAR ─────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" data-i18n="nav.logo">AK<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about"    data-i18n="nav.about">About</a></li>
+      <li><a href="#skills"   data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#contact"  data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="uk">UA</button>
+      <button class="lang-btn" data-lang="pl">PL</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE MENU ────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about"    data-i18n="nav.about" class="mm-link">About</a></li>
+    <li><a href="#skills"   data-i18n="nav.skills" class="mm-link">Skills</a></li>
+    <li><a href="#projects" data-i18n="nav.projects" class="mm-link">Projects</a></li>
+    <li><a href="#contact"  data-i18n="nav.contact" class="mm-link">Contact</a></li>
+  </ul>
+  <div class="lang-switcher mm-lang">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="uk">UA</button>
+    <button class="lang-btn" data-lang="pl">PL</button>
+  </div>
+</div>
+
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <div class="hero-content" data-aos="fade-up">
+    <div class="hero-photo-wrap">
+      <div class="photo-ring"></div>
+      <img src="photo.jpg" alt="Anton Kovalov" class="hero-photo" id="heroPhoto"
+           onerror="this.onerror=null;this.src='https://api.dicebear.com/9.x/initials/svg?seed=AK&backgroundColor=6366f1&textColor=ffffff&fontSize=40'"/>
+    </div>
+    <div class="hero-text">
+      <p class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</p>
+      <h1 class="hero-name">Anton <span class="accent">Kovalov</span></h1>
+      <p class="hero-role"><span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span></p>
+      <p class="hero-age" data-i18n="hero.age">16 y.o. · .NET Junior Developer</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">View Projects</a>
+        <a href="#contact"  class="btn btn-ghost"   data-i18n="hero.cta2">Contact Me</a>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </a>
+</section>
+
+<!-- ── ABOUT ──────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up"><span data-i18n="about.title">About Me</span></h2>
+    <div class="about-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="about-text">
+        <p data-i18n="about.p1">
+          I'm a 16-year-old .NET junior developer passionate about building clean, efficient, and scalable backend systems. I write asynchronous, optimised code and follow industry best practices.
+        </p>
+        <p data-i18n="about.p2">
+          My focus is on REST API development with C# and .NET — from authentication flows with JWT &amp; refresh tokens to email verification and robust error handling.
+        </p>
+        <div class="about-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">REST API</span>
+          <span class="tag">JWT</span>
+          <span class="tag">SOLID</span>
+          <span class="tag">Async</span>
+        </div>
+      </div>
+      <div class="about-card glass">
+        <div class="stat-item">
+          <span class="stat-num">1+</span>
+          <span class="stat-label" data-i18n="about.stat1">Years coding</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label" data-i18n="about.stat2">Projects done</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label" data-i18n="about.stat3">Passion for code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up"><span data-i18n="skills.title">Skills</span></h2>
+
+    <div class="skills-grid">
+
+      <!-- Core -->
+      <div class="skill-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="skill-icon">⚙️</div>
+        <h3 data-i18n="skills.core">Core Stack</h3>
+        <ul>
+          <li>C# <span class="pill">.NET 8</span></li>
+          <li>Entity Framework Core</li>
+          <li>REST API / Endpoints</li>
+          <li>Async / Await</li>
+          <li>Cancellation Token</li>
+        </ul>
+      </div>
+
+      <!-- Architecture -->
+      <div class="skill-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="skill-icon">🏛️</div>
+        <h3 data-i18n="skills.arch">Architecture &amp; Patterns</h3>
+        <ul>
+          <li>SOLID</li>
+          <li>KISS / DRY</li>
+          <li>Dependency Injection</li>
+          <li>Repository Pattern</li>
+          <li>Clean Architecture</li>
+        </ul>
+      </div>
+
+      <!-- Auth & Security -->
+      <div class="skill-card glass" data-aos="fade-up" data-aos-delay="160">
+        <div class="skill-icon">🔐</div>
+        <h3 data-i18n="skills.auth">Auth &amp; Security</h3>
+        <ul>
+          <li>JWT Token</li>
+          <li>Refresh Token</li>
+          <li>Email Verification</li>
+          <li>MailTrap / SMTP</li>
+          <li>Fluent Validation</li>
+        </ul>
+      </div>
+
+      <!-- Other -->
+      <div class="skill-card glass" data-aos="fade-up" data-aos-delay="240">
+        <div class="skill-icon">🛠️</div>
+        <h3 data-i18n="skills.other">Tools &amp; More</h3>
+        <ul>
+          <li>Error Handling</li>
+          <li>LINQ &amp; Syntactic Sugar</li>
+          <li>Git / GitHub</li>
+          <li>Postman</li>
+          <li>Swagger / OpenAPI</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ────────────────────────────────────────── -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up"><span data-i18n="projects.title">Projects</span></h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-header">
+          <span class="project-badge" data-i18n="proj1.badge">Backend</span>
+          <div class="project-links">
+            <a href="https://calculator-app-2wv8.onrender.com" target="_blank" rel="noopener" class="proj-link" title="Live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">AdCrew <span class="accent">Agency</span></h3>
+        <p class="project-desc" data-i18n="proj1.desc">
+          Full backend for a digital agency platform. Implemented complete auth flow: registration, login, JWT authentication, refresh tokens, and email verification codes via MailTrap. Built all REST API endpoints from scratch.
+        </p>
+        <div class="project-tech">
+          <span class="chip">C#</span>
+          <span class="chip">.NET</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Refresh Token</span>
+          <span class="chip">MailTrap</span>
+          <span class="chip">REST API</span>
+        </div>
+        <a href="https://calculator-app-2wv8.onrender.com" target="_blank" rel="noopener" class="btn btn-sm btn-primary mt-card" data-i18n="proj.live">View Live →</a>
+      </article>
+
+    </div>
+
+    <p class="projects-note" data-i18n="projects.note" data-aos="fade-up">More projects coming soon…</p>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container contact-wrap">
+    <h2 class="section-title" data-aos="fade-up"><span data-i18n="contact.title">Get In Touch</span></h2>
+    <p class="contact-sub" data-i18n="contact.sub" data-aos="fade-up" data-aos-delay="60">
+      Open for opportunities, collaborations, or just a chat about C#.
+    </p>
+    <div class="contact-cards" data-aos="fade-up" data-aos-delay="120">
+      <a href="mailto:antik211209@gmail.com" class="contact-card glass">
+        <span class="cc-icon">✉️</span>
+        <span class="cc-label" data-i18n="contact.email">Email</span>
+        <span class="cc-val">antik211209@gmail.com</span>
+      </a>
+      <a href="https://github.com/tryantik" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="cc-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-2.07c-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </span>
+        <span class="cc-label">GitHub</span>
+        <span class="cc-val">github.com/tryantik</span>
+      </a>
+      <a href="https://t.me/yatagarasuo" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="cc-icon">💬</span>
+        <span class="cc-label">Telegram</span>
+        <span class="cc-val">@yatagarasuo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <p data-i18n="footer.copy">© 2025 Anton Kovalov. All rights reserved.</p>
+  <p class="footer-sub" data-i18n="footer.made">Made with ❤️ and C#</p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
